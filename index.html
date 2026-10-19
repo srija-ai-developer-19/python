@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Munch - Python</title>
+    <style>
+        body { text-align:center; font-family: Arial; background: #fff8e1; margin: 0; padding: 30px; }
+        .card { background:white; width: 300px; margin: 20px auto; padding:20px; border-radius:15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        button { padding:12px 25px; background: #ff9800; color:white; border:none; border-radius:8px; cursor:pointer; font-size:16px; }
+        button:hover { background: #e68900; }
+        #order-section { display:none; margin-top:20px; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Food Munch 🍔</h1>
+    <p>Made with Python + Flask</p>
+
+    <button onclick="showOrder()">Order Now</button>
+
+    <div id="order-section">
+        <div class="card">
+            <h3>🔥 Your Order Placed!</h3>
+            <p><b>Items:</b></p>
+            <p>🍕 Pizza - Rs. 299</p>
+            <p>🍔 Burger - Rs. 199</p>
+            <p>🍟 Fries - Rs. 99</p>
+            <hr>
+            <p><b>Total: Rs. 597</b></p>
+            <p style="color:green;">Order will be delivered in 30 mins!</p>
+            <button onclick="hideOrder()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showOrder() {
+            document.getElementById('order-section').style.display = 'block';
+        }
+        function hideOrder() {
+            document.getElementById('order-section').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
